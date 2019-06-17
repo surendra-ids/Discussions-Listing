@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_compile_discussions', language 'en'
+ * Strings for component 'block_compile_discussion', language 'en'
  *
  * @package    block
- * @subpackage compile_discussions
+ * @subpackage compile_discussion
  * @copyright  2019 idslogic <sales@idslogic.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,7 +27,7 @@ $string['anonuser'] = "Anonymous user";
 $string['back'] = 'Back to {$a}';
 $string['chooseforum'] = 'Forums...';
 $string['choosehsuforum'] = 'Advanced Forums...';
-$string['compile_discussions:addinstance'] = 'Add discussions list block';
+$string['compile_discussion:addinstance'] = 'Add discussions list block';
 $string['pluginname'] = 'Discussions Listing';
 $string['select'] = 'Select the forum you want to post your query';
 

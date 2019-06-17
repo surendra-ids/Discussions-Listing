@@ -17,14 +17,14 @@
 /**
  * Compile discussions block
  *
- * @package    block_compile_discussions
+ * @package    block_compile_discussion
  * @copyright  2019 idslogic <sales@idslogic.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-class block_compile_discussions extends block_base {
+class block_compile_discussion extends block_base {
     public function init() {
-        $this->title = get_string('pluginname', 'block_compile_discussions');
+        $this->title = get_string('pluginname', 'block_compile_discussion');
     }
 
     public function applicable_formats() {
@@ -121,13 +121,13 @@ class block_compile_discussions extends block_base {
         $actionurl = new moodle_url('/mod/forum/view.php', array('type' => 'forum'));
         $actionurlhsu = new moodle_url('/mod/forum/view.php', array('type' => 'hsuforum'));
         $select = new single_select($actionurl, 'id', $menu, null,
-        array('' => get_string('chooseforum', 'block_compile_discussions')));
+        array('' => get_string('chooseforum', 'block_compile_discussion')));
         if ($hsuforuminstalled) {
             $selecthsu = new single_select($actionurlhsu, 'id', $menuhsu, null,
-                array('' => get_string('choosehsuforum', 'block_compile_discussions')));
+                array('' => get_string('choosehsuforum', 'block_compile_discussion')));
         }
         $this->content = new stdClass;
-        $this->content->text = html_writer::tag('p', get_string('select', 'block_compile_discussions'));
+        $this->content->text = html_writer::tag('p', get_string('select', 'block_compile_discussion'));
         $this->content->text .= $OUTPUT->render($select);
         if ($hsuforuminstalled) {
             $this->content->text .= $OUTPUT->render($selecthsu);

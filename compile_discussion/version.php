@@ -18,7 +18,7 @@
  * Version details
  *
  * @package    block
- * @subpackage compile_discussions
+ * @subpackage compile_discussion
  * @copyright  2019 idslogic <sales@idslogic.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,5 +27,5 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2019061701;        // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2013111802;        // Requires this Moodle version.
-$plugin->component = 'block_compile_discussions'; // Full name of the plugin (used for diagnostics).
+$plugin->component = 'block_compile_discussion'; // Full name of the plugin (used for diagnostics).
 $plugin->release = 'Version 1.0 for Moodle 3.1';

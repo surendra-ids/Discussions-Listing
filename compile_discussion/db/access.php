@@ -18,7 +18,7 @@
  * Compile discussions block capabilities.
  *
  * @package    block
- * @subpackage compile_discussions
+ * @subpackage compile_discussion
  * @copyright  2019 idslogic <sales@idslogic.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
-    'block/compile_discussions:addinstance' => array(
+    'block/compile_discussion:addinstance' => array(
         'riskbitmask' => RISK_SPAM | RISK_XSS,
 
         'captype' => 'write',
