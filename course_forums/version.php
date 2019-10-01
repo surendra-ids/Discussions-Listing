@@ -15,22 +15,17 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_compile_discussion', language 'en'
+ * Version details
  *
  * @package    block
- * @subpackage compile_discussion
+ * @subpackage course_forums
  * @copyright  2019 idslogic <sales@idslogic.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['anonuser'] = "Anonymous user";
-$string['back'] = 'Back to {$a}';
-$string['chooseforum'] = 'Forums...';
-$string['choosehsuforum'] = 'Advanced Forums...';
-$string['compile_discussion:addinstance'] = 'Add discussions list block';
-$string['pluginname'] = 'Discussions Listing';
-$string['select'] = 'Select the forum you want to post your query';
+defined('MOODLE_INTERNAL') || die();
 
-$string['error:invalidtype'] = 'An invalid forum type {$a} was passed.';
-$string['error:noforum'] = 'There is no {$b} with id {$a}';
-$string['error:nopermission'] = 'You don\'t have permission to view this forum';
+$plugin->version   = 2019061701;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->requires  = 2013111802;        // Requires this Moodle version.
+$plugin->component = 'block_course_forums'; // Full name of the plugin (used for diagnostics).
+$plugin->release = 'Version 1.0 for Moodle 3.1';

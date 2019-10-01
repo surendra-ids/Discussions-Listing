@@ -15,17 +15,30 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Compile discussions block capabilities.
  *
  * @package    block
- * @subpackage compile_discussion
+ * @subpackage course_forums
  * @copyright  2019 idslogic <sales@idslogic.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+// Capabilities similar to block_html, without myaddinstance.
+
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019061701;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2013111802;        // Requires this Moodle version.
-$plugin->component = 'block_compile_discussion'; // Full name of the plugin (used for diagnostics).
-$plugin->release = 'Version 1.0 for Moodle 3.1';
+$capabilities = array(
+
+    'block/course_forums:addinstance' => array(
+        'riskbitmask' => RISK_SPAM | RISK_XSS,
+
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(
+            'editingteacher' => CAP_ALLOW,
+            'manager' => CAP_ALLOW
+        ),
+
+        'clonepermissionsfrom' => 'moodle/site:manageblocks'
+    ),
+);

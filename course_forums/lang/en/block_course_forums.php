@@ -15,30 +15,22 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Compile discussions block capabilities.
+ * Strings for component 'block_course_forums', language 'en'
  *
  * @package    block
- * @subpackage compile_discussion
+ * @subpackage course_forums
  * @copyright  2019 idslogic <sales@idslogic.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// Capabilities similar to block_html, without myaddinstance.
+$string['anonuser'] = "Anonymous user";
+$string['back'] = 'Back to {$a}';
+$string['chooseforum'] = 'Forums...';
+$string['choosehsuforum'] = 'Advanced Forums...';
+$string['course_forums:addinstance'] = 'Add forum list block';
+$string['pluginname'] = 'Course forums';
+$string['select'] = 'Select the forum you want to post your query';
 
-defined('MOODLE_INTERNAL') || die();
-
-$capabilities = array(
-
-    'block/compile_discussion:addinstance' => array(
-        'riskbitmask' => RISK_SPAM | RISK_XSS,
-
-        'captype' => 'write',
-        'contextlevel' => CONTEXT_BLOCK,
-        'archetypes' => array(
-            'editingteacher' => CAP_ALLOW,
-            'manager' => CAP_ALLOW
-        ),
-
-        'clonepermissionsfrom' => 'moodle/site:manageblocks'
-    ),
-);
+$string['error:invalidtype'] = 'An invalid forum type {$a} was passed.';
+$string['error:noforum'] = 'There is no {$b} with id {$a}';
+$string['error:nopermission'] = 'You don\'t have permission to view this forum';
