@@ -74,7 +74,7 @@ class block_course_forums extends block_base {
                 // Add to array for the menu. Truncate the name if long.
                 $fname = $forum->name;
                 if (strlen($fname) > 20) {
-                    $fname = substr($fname, 0, 20) . '...';
+                    $fname = mb_substr($fname, 0, 20) . '...';
                 }
                 $menu[$cm->id] = $sectionname.'=>'.$fname;
             }
@@ -106,7 +106,7 @@ class block_course_forums extends block_base {
                     // Add to array for the menu. Truncate the name if long.
                     $hname = $hsuforum->name;
                     if (strlen($hname) > 20) {
-                        $hname = substr($hname, 0, 20) . '...';
+                        $hname = mb_substr($hname, 0, 20) . '...';
                     }
                     $menuhsu[$cm->id] = $hname;
                 }
